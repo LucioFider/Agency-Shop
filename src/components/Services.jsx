@@ -3,7 +3,7 @@ import React from "react";
 const Services = () => {
   return (
     <>
-      <section className="options">
+      <section className="options section-margin">
         <svg
           width="642"
           height="233"

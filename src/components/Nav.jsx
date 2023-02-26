@@ -136,16 +136,6 @@ const Nav = () => {
         role="switch"
         aria-label="light/dark mode"
       ></button>
-      <audio
-        src="audio/light-on.mp3"
-        className="theme-audio--light-on"
-        data-attribute="adapted from user 160033 file on freesound.org https://freesound.org/people/160033/sounds/366184/user CC BY-NC 3.0"
-      ></audio>
-      <audio
-        src="audio/light-off.mp3"
-        className="theme-audio--light-off"
-        data-attribute="adapted from user 160033 file on freesound.org https://freesound.org/people/160033/sounds/366184/user CC BY-NC 3.0"
-      ></audio>
     </div>
   );
 };

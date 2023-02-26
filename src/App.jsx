@@ -4,9 +4,11 @@ function App() {
   return (
     <div className="">
       <Nav />
-      <Hero />
-      <Features />
-      <Services />
+      <main>
+        <Hero />
+        <Features />
+        <Services />
+      </main>
       <Footer />
     </div>
   );

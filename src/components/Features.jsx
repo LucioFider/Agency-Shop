@@ -2,7 +2,7 @@ import React from "react";
 
 const Features = () => {
   return (
-    <section class="method" id="method">
+    <section class="method section-margin" id="method">
       <svg
         width="642"
         height="233"

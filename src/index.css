@@ -52,3 +52,260 @@ button {
   I missed the change from 96% lightness in the second box-shadow to 26% lightness when doing the video
   */
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: var(--text-dark);
+    --accent1: var(--accent1-dark);
+    --accent2: var(--accent2-dark);
+    --accent3: var(--accent3-dark);
+    --bkg1: var(--bkg1-dark);
+    --bkg2: var(--bkg2-dark);
+    --shadow: var(--shadow-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: var(--text-light);
+    --accent1: var(--accent1-light);
+    --accent2: var(--accent2-light);
+    --accent3: var(--accent3-light);
+    --bkg1: var(--bkg1-light);
+    --bkg2: var(--bkg2-light);
+    --shadow: var(--shadow-light);
+  }
+}
+
+[color-scheme="dark"] {
+  --text: var(--text-dark);
+  --accent1: var(--accent1-dark);
+  --accent2: var(--accent2-dark);
+  --accent3: var(--accent3-dark);
+  --bkg1: var(--bkg1-dark);
+  --bkg2: var(--bkg2-dark);
+  --shadow: var(--shadow-dark);
+}
+
+[color-scheme="light"] {
+  --text: var(--text-light);
+  --accent1: var(--accent1-light);
+  --accent2: var(--accent2-light);
+  --accent3: var(--accent3-light);
+  --bkg1: var(--bkg1-light);
+  --bkg2: var(--bkg2-light);
+  --shadow: var(--shadow-light);
+}
+
+/* utility classes */
+/* text color */
+.text {
+  color: var(--text);
+}
+.accent1 {
+  color: var(--accent1);
+  fill: var(--accent1);
+}
+
+.accent1--stroke {
+  stroke: var(--accent1);
+}
+
+.accent2 {
+  color: var(--accent2);
+  fill: var(--accent2);
+}
+.accent3 {
+  color: var(--accent3);
+  fill: var(--accent3);
+}
+.bkg1 {
+  color: var(--bkg1);
+}
+.bkg2 {
+  color: var(--bkg2);
+}
+
+.bkg2--stroke {
+  stroke: var(--bkg2);
+}
+
+.bkg2--fill {
+  fill: var(--bkg2);
+}
+
+/* link color */
+.text-link {
+  color: var(--text);
+}
+.accent1-link {
+  color: var(--accent1);
+}
+.accent2-link {
+  color: var(--accent2);
+}
+.accent3-link {
+  color: var(--accent3);
+}
+.bkg1-link {
+  color: var(--bkg1);
+}
+.bkg2-link {
+  color: var(--bkg2);
+}
+
+/* background color */
+
+.text-bg {
+  background-color: var(--text);
+}
+.accent1-bg {
+  background-color: var(--accent1);
+}
+.accent2-bg {
+  background-color: var(--accent2);
+}
+.accent3-bg {
+  background-color: var(--accent3);
+}
+.bkg1-bg {
+  background-color: var(--bkg1);
+}
+.bkg2-bg {
+  background-color: var(--bkg2);
+}
+
+/* text sizing */
+
+.text-small {
+  font-size: clamp(0.8rem, 0.43409097rem + 1.672727vw, 1.375rem);
+  text-transform: uppercase;
+  margin-bottom: -1.3rem;
+}
+/* components */
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: max-content;
+  box-shadow: 4px 4px var(--text);
+  text-decoration: none;
+  transition: all 200ms cubic-bezier(1, -0.04, 0, 1.21);
+}
+
+.btn:is(:hover, :focus) {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+/* styling */
+
+nav {
+  padding: 2rem 2rem 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  width: clamp(160px, 69.2307695px + 23.076923vw, 300px);
+  background-color: var(--bkg1);
+  position: relative;
+}
+.theme {
+  background-color: var(--text);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid var(--bkg1);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.theme:is(:hover, :focus) {
+  background-color: var(--accent1);
+  opacity: 0.8;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background-color: var(--bkg1);
+}
+
+main {
+  display: grid;
+  gap: clamp(2rem, 1.72727269rem + 5.818182vw, 5rem);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+.h2,
+.h3,
+.h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+}
+
+h2,
+.h2 {
+  font-size: clamp(2rem, 0.6875rem + 6vw, 4.0625rem);
+  line-height: 1.1;
+}
+
+h3,
+.h3 {
+  font-size: clamp(1.3rem, 0.47272731rem + 3.781818vw, 2.6rem);
+}
+
+h4,
+.h4 {
+  font-size: clamp(1.2rem, 0.30909097rem + 4.072727vw, 2.6rem);
+}
+
+/* Cards */
+.cards {
+  max-width: 900px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 5rem 2rem;
+  padding: 3rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: 270px;
+  display: grid;
+  grid-gap: 0.5rem;
+  padding: 3rem 2rem 2rem;
+  border-radius: 15px;
+  border-bottom: 5px solid (--accent3);
+  position: relative;
+}
+.card span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border-radius: 50%;
+  border: 8px solid var(--bkg1);
+  line-height: 0.75;
+  font-size: clamp(1.3rem, 0.47272731rem + 3.781818vw, 2.6rem);
+  width: clamp(4rem, 2.72727269rem + 5.818182vw, 6vw);
+  height: clamp(4rem, 2.72727269rem + 55.818182vw, 6vw);
+}

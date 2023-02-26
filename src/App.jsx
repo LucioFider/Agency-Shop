@@ -1,7 +1,12 @@
+import { Nav, Hero, Features, Footer } from "./components";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Agency Shop</h1>
+    <div className="">
+      <Nav />
+      <Hero />
+      <Features />
+      <Footer />
     </div>
   );
 }
